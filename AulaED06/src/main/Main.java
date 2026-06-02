@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package aulaed05;
+package main;
 
 import beans.Pessoa;
 import figuras2D.Ponto2D;
@@ -43,6 +43,7 @@ public class Main {
         
         v1.inserirOrdemCrescente(p3);
         System.out.println(v1);
+        System.out.println("Vinicius Willian de Araujo, IPV6 = 2804:868:d043:7ec0:cb49:7f63:c925:2dc");
         
     }
 }

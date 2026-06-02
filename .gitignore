@@ -1,0 +1,27 @@
+# ====================================================================
+# .gitignore - Estrutura de Dados (Java & NetBeans)
+# ====================================================================
+
+# --- Pastas de Compilação do NetBeans ---
+**/build/
+**/dist/
+**/nbdist/
+
+# --- Arquivos Compilados (Bytecodes) ---
+**/*.class
+
+# --- Arquivos Temporários e de Cache do NetBeans ---
+**/.netbeans_automatic_build
+**/.netbeans_update_resources
+
+# --- Configurações Privadas do Usuário (Não devem ir para o GitHub) ---
+**/nbproject/private/
+**/nbproject/project.work
+**/nbproject/build-impl.xml
+
+# --- Arquivos Ocultos do Sistema Operacional ---
+**/.DS_Store
+**/Thumbs.db
+
+# --- Outros Ambientes (Caso abra os arquivos no VS Code) ---
+**/.vscode/

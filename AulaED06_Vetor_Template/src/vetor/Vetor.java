@@ -10,33 +10,38 @@ import figuras2D.Ponto2D;
  *
  * @author arauj
  */
-public class Vetor {
-    private Object V[];
+public class Vetor<T> {
+    private final T V[];
     private int tamanho;
 
-    public Vetor(int valTamanho) {
-        V = new Object[valTamanho];
-        tamanho = 0;
+    public Vetor (T[] V) {
+        this.V = V;
+        //this.tamanho = V.length;
     }
+    /*
+    public Vetor(T[] V, int length){
+        V = new T[length];
+        tamanho = 0;
+    }*/
 
     public long getTamanho() {
         return tamanho;
     }
 
-    public Object getV(int indice) {
+    public T getV(int indice) {
         if(indice >= 0 && indice <tamanho)
             return V[indice];
         return null;
     }
 
-    public void inserirFinal(Object obj){
+    public void inserirFinal(T obj){
         if (tamanho < V.length) {
             V[tamanho] = obj;
         }
         tamanho++;
     }
     
-    public void apagar(Object obj){
+    public void apagar(T obj){
         int aux = 0;
         for (int i = 0; i < tamanho; i++)
             if(V[i].equals(obj)){
@@ -48,30 +53,20 @@ public class Vetor {
             V[i] = V[i+1];
     }
     
-    public void inserirOrdemCrescente(Ponto2D obj){
-        if (obj != null)
-            for (int i = 0; i < tamanho; i ++){
-                //System.out.println(V[i].getClass());
-                if(obj.maior(V[i]) && !(obj.maior(V[i+1]))){
-                    V[i+1+1] = V[i+1];
-                    V[i+1] = obj;
-                    tamanho++;
-                }
-            }
+    public void inserirOrdemCrescente(T obj){
     }
     
-    public void inserirOrdemDecrescente(Object obj){
-        
+    public void inserirOrdemDecrescente(T obj){
     }
     
-    public boolean pertence(Object obj){
+    public boolean pertence(T obj){
         for(int i = 0; i < tamanho; i++)
             if(V[i].equals(obj))
                 return true;
         return false;
     }
     
-    public int indice(Object obj){
+    public int indice(T obj){
         for(int i = 0; i < tamanho; i++)
             if(V[i].equals(obj))
                 return i;
@@ -87,5 +82,4 @@ public class Vetor {
         str += '}';
         return str;
     }
-    
 }
