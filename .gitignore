@@ -1,0 +1,24 @@
+# --- Bloquear pastas de compilação em qualquer nível ---
+**/build/
+**/dist/
+**/nbdist/
+**/bin/
+
+# --- Bloquear arquivos compilados e temporários ---
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+**/.netbeans_automatic_build
+**/.netbeans_update_resources
+
+# --- Configurações Privadas do NetBeans ---
+**/nbproject/private/
+**/nbproject/project.work
+**/nbproject/build-impl.xml
+
+# --- Arquivos de sistema e IDEs ---
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
